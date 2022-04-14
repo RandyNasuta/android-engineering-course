@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="390dp"
+        android:layout_height="390dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/board"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:onClick="chooseSquare"
+            android:tag="0"
+            app:layout_column="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="45dp"
+            android:onClick="chooseSquare"
+            android:tag="1"
+            app:layout_column="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="35dp"
+            android:onClick="chooseSquare"
+            android:tag="2"
+            app:layout_column="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:onClick="chooseSquare"
+            android:tag="3"
+            app:layout_column="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="45dp"
+            android:onClick="chooseSquare"
+            android:tag="4"
+            app:layout_column="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="35dp"
+            android:onClick="chooseSquare"
+            android:tag="5"
+            app:layout_column="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:onClick="chooseSquare"
+            android:tag="6"
+            app:layout_column="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="45dp"
+            android:onClick="chooseSquare"
+            android:tag="7"
+            app:layout_column="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="91dp"
+            android:layout_height="132dp"
+            android:layout_marginLeft="35dp"
+            android:onClick="chooseSquare"
+            android:tag="8"
+            app:layout_column="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_row="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="53dp"
+        android:onClick="playAgain"
+        android:text=" Play Again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerText"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
